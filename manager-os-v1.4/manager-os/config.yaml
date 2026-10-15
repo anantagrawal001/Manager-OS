@@ -1,0 +1,314 @@
+# Active configuration — consolidated 2026-10-12
+manager:
+  name: Manager
+  owner: Anant
+  address_as: Sir
+  personality:
+  - worker
+  - well-wisher
+  - ideal-servant
+  - best-friend
+  language: en
+  voice_enrollment_done: false
+  hardware_fingerprint: null
+server:
+  host: 127.0.0.1
+  port: 8000
+voice:
+  stt_engine: whisper
+  whisper_model: base
+  voice_gender: female
+  tts_engine: pyttsx3
+  tts_voice: en-US-AriaNeural
+  wake_word: hey manager
+  alternative_wake: manager
+  enabled: true
+ai_router:
+  primary_reasoning: claude
+  primary_search: gemini
+  primary_image: stability
+  primary_code: claude
+  primary_writing: claude
+  primary_translation: gemini
+  fallback_chain:
+  - claude
+  - gemini
+  - gpt4o
+  - mistral
+  free_tier_only: true
+  local_first: true
+  local_only: false
+  request_timeout_seconds: 90
+api_keys:
+  anthropic: null
+  google_ai: null
+  openai: null
+  elevenlabs: null
+  stability_ai: null
+  zerodha_api_key: null
+  zerodha_secret: null
+  huggingface: null
+trading:
+  mode: paper
+  confidence_threshold: 0.85
+  min_agents_consensus: 3
+  max_position_size_pct: 5
+  starting_capital: 10000
+  exchanges:
+  - zerodha
+  crypto_exchanges: []
+security:
+  encryption: aes-256
+  privacy_mode: strict
+  block_api_training: true
+  encrypt_local_data: true
+  identity_factors:
+  - hardware
+  - voice
+  - passphrase
+  passphrase_backup: true
+vpn:
+  provider: tailscale
+  enabled: false
+  tailscale_auth_key: null
+chrome:
+  remote_debugging_port: 9222
+  user_data_path: ./logs/chrome_automation
+  profiles:
+    main: Default
+    work: Profile 1
+    personal: Profile 2
+  connect_existing: false
+social:
+  instagram_personal: null
+  instagram_professional: null
+  whatsapp: null
+  facebook: null
+  auto_post: false
+storage:
+  db_path: ./logs/manager.db
+  backup_path: ./backups/
+  log_path: ./logs/
+  max_memory_mb: 2048
+  tasks_path: ./logs/tasks.db
+ui:
+  theme: cinematic-dark
+  accent_color: '#00d4ff'
+  show_agent_status: true
+  auto_open_browser: true
+self_heal:
+  enabled: true
+  log_scan_interval: 30
+  auto_fix: false
+  backup_before_fix: true
+  notify_sir_on_fix: false
+trading_alerts:
+  enabled: false
+  delivery: whatsapp
+  morning_brief_time: 08:00
+  evening_report_time: '16:00'
+  watchlist:
+  - RELIANCE
+  - TCS
+  - INFY
+  - HDFCBANK
+  - TATAMOTORS
+  price_alerts: []
+  whatsapp_number: null
+  telegram_chat_id: null
+  telegram_bot_token: null
+notifications:
+  whatsapp_enabled: false
+  telegram_enabled: false
+  dashboard_enabled: true
+voice_override:
+  tts_engine: pyttsx3
+  whisper_model: base
+conversation:
+  store_path: ./logs/conversations.db
+  max_context_messages: 20
+  never_delete: true
+health_alerts:
+  ram_threshold_pct: 95
+  cpu_threshold_pct: 92
+  disk_min_free_gb: 15
+  cooldown_minutes: 10
+auth:
+  bypass_in_development: false
+  session_ttl_hours: 8
+  rate_limit_key_add: 5
+
+# Prior configuration retained for rollback:
+# # MANAGER OS — Configuration
+# # Edit this file to customize your setup
+# # Manager will also update this automatically when you provide API keys
+# 
+# manager:
+#   name: "Manager"
+#   owner: "Anant"
+#   address_as: "Sir"
+#   personality: ["worker", "well-wisher", "ideal-servant", "best-friend"]
+#   language: "en"
+#   voice_enrollment_done: false
+#   hardware_fingerprint: null  # Set on first run
+# 
+# server:
+#   host: "localhost"
+#   port: 8000
+#   debug: false
+# 
+# voice:
+#   stt_engine: "whisper"        # whisper (local) | deepgram (cloud)
+#   whisper_model: "base"        # tiny | base | small | medium | large
+#   voice_gender: "female"  # P0-5
+#   tts_engine: "pyttsx3"
+#   tts_voice: "en-US-AriaNeural"   # P0-5: Female voice (was GuyNeural male)
+#   wake_word: "hey manager"
+#   alternative_wake: "manager"
+# 
+# ai_router:
+#   primary_reasoning: "claude"
+#   primary_search: "gemini"
+#   primary_image: "stability"
+#   primary_code: "claude"
+#   primary_writing: "claude"
+#   primary_translation: "gemini"
+#   fallback_chain: ["claude", "gemini", "gpt4o", "mistral"]
+#   free_tier_only: true
+# 
+# api_keys:
+#   anthropic: null         # Auto-fetched by Manager
+#   google_ai: null         # Auto-fetched by Manager
+#   openai: null            # Auto-fetched by Manager
+#   elevenlabs: null        # Optional — for premium voice
+#   stability_ai: null      # Auto-fetched
+#   zerodha_api_key: null   # Trading — manual setup required
+#   zerodha_secret: null    # Trading — manual setup required
+#   huggingface: null       # Auto-fetched
+# 
+# trading:
+#   mode: "paper"           # paper | live (live requires Anant's explicit approval)
+#   confidence_threshold: 0.85
+#   min_agents_consensus: 3
+#   max_position_size_pct: 5  # Max 5% of capital per trade
+#   starting_capital: 10000   # INR — paper trading starting amount
+#   exchanges: ["zerodha"]    # Indian stock market
+#   crypto_exchanges: []      # Add if needed
+# 
+# security:
+#   encryption: "aes-256"
+#   privacy_mode: "strict"     # strict | normal
+#   block_api_training: true
+#   encrypt_local_data: true
+#   identity_factors: ["hardware", "voice", "passphrase"]
+#   passphrase_backup: true
+# 
+# vpn:
+#   enabled: false             # Enable for remote access
+#   type: "wireguard"
+#   config_path: "./security/wireguard.conf"
+# 
+# chrome:
+#   remote_debugging_port: 9222
+#   user_data_path: null
+#   profiles:
+#     main: "Default"
+#     work: "Profile 1"
+#     personal: "Profile 2"
+# 
+# social:
+#   instagram_personal: null   # Handle — set after OAuth
+#   instagram_professional: null
+#   whatsapp: null
+#   facebook: null
+#   auto_post: false           # Enable after testing
+# 
+# storage:
+#   db_path: "./logs/manager.db"
+#   backup_path: "./backups/"
+#   log_path: "./logs/"
+#   max_memory_mb: 2048        # Max RAM for Manager processes
+# 
+# ui:
+#   theme: "cinematic-dark"
+#   accent_color: "#00d4ff"
+#   show_agent_status: true
+#   auto_open_browser: true
+# 
+# self_heal:
+#   enabled: true
+#   log_scan_interval: 30   # seconds
+#   auto_fix: true
+#   backup_before_fix: true
+#   notify_sir_on_fix: false  # Only notify on fixes that need human action
+# 
+# trading_alerts:
+#   enabled: true
+#   delivery: "whatsapp"       # whatsapp | telegram | both
+#   morning_brief_time: "08:00"  # IST
+#   evening_report_time: "16:00" # After market close
+#   watchlist:
+#     - "RELIANCE"
+#     - "TCS"
+#     - "INFY"
+#     - "HDFCBANK"
+#     - "TATAMOTORS"
+#   price_alerts: []           # Populated when Sir sets alerts: [{ticker, below, above}]
+#   whatsapp_number: null      # Set after WhatsApp OAuth
+#   telegram_chat_id: null     # Set after Telegram bot setup
+#   telegram_bot_token: null   # Set after Telegram bot setup
+# 
+# notifications:
+#   whatsapp_enabled: false
+#   telegram_enabled: false
+#   dashboard_enabled: true
+# 
+# # [UPDATED 2026-05-28] TTS engine changed to pyttsx3 (confirmed working)
+# # OLD: tts_engine: "pyttsx3"
+# # NEW setting below overrides the voice section above:
+# voice_override:
+#   tts_engine: "pyttsx3"
+#   whisper_model: "base"
+# 
+# conversation:
+#   store_path: "./logs/conversations.db"
+#   max_context_messages: 20
+#   never_delete: true
+# 
+# health_alerts:
+#   ram_threshold_pct: 95
+#   cpu_threshold_pct: 92
+#   disk_min_free_gb: 15
+#   cooldown_minutes: 10
+# 
+# auth:
+#   bypass_in_development: false
+#   passphrase_hint: "Set during first run enrollment"
+# 
+# # [UPDATED 2026-05-31 Phase A — P0-2, P0-3]
+# server:
+#   host: "127.0.0.1"   # P0-3: localhost only (was 0.0.0.0 — LAN exposed)
+#   port: 8000
+#   
+# auth:
+#   bypass_in_development: false   # Set to false for production
+#   session_ttl_hours: 8
+#   rate_limit_key_add: 5         # max key additions per minute
+# 
+# # [UPDATED 2026-05-31 Phase A — P0-6]
+# # python-wireguard removed from requirements (caused install failures on Windows)
+# # VPN handled by Tailscale config instead
+# vpn:
+#   provider: "tailscale"         # tailscale | none
+#   enabled: false
+#   tailscale_auth_key: null      # Set when enabling remote access
+
+# Approved by owner 2026-10-12: local evidence for personal tasks.
+personal_context:
+  roots:
+  - C:\Users\Anant\Documents
+  - C:\Users\Anant\Desktop
+  - C:\Users\Anant\Downloads
+workflows:
+  store_path: ./logs/workflows.db
+  output_root: outputs

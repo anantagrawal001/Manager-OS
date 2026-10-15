@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+logs/
+outputs/
+backups/
+releases/
+workspaces/
+security/identity/
+security/key_vault.enc
+.env

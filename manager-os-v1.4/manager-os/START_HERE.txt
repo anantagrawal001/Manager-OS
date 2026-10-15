@@ -1,0 +1,100 @@
+MANAGER OS — WORKABLE LOCAL RELEASE — 12 OCTOBER 2026
+
+On this computer:
+1. Double-click startup.bat.
+2. Sign in with your existing passphrase at http://127.0.0.1:8000.
+3. Type a command, or use Local mic to record speech on this computer.
+
+Try these commands:
+  status
+  which model are you using
+  add task Prepare my resume
+  list tasks
+  remind me in 10 minutes to take a break
+  complete task 1
+  open notepad
+  find file invoice.pdf
+  read file 1
+  create file notes.txt with content These are my notes.
+  build a single HTML page with a countdown timer
+  conversation history
+
+Dashboard controls:
+  Tasks & reminders: add, list and complete saved tasks; choose a reminder time.
+  Outputs: download files and project ZIPs created by Manager.
+  Connections: inspect provider status, save API keys and check them.
+  Local mic: record up to 20 seconds; click again to transcribe. Review the text, then Send.
+  Speech: enable spoken replies using Windows' local voice.
+  Lock: end the current session.
+
+Keep Manager OS running for reminder alerts. Close its terminal or press Ctrl+C
+to stop it, or double-click STOP.bat. The launcher reuses an already running instance.
+
+The installed qwen3.5:4b model is used locally first. Configured cloud providers
+can be tried if local AI fails. Set ai_router.local_only to true in config.yaml
+to prohibit cloud inference. Browser speech (the small microphone/continuous
+mode) may use the browser's online speech service. Local mic uses local Whisper.
+
+On a fresh installation, use Python 3.11 and run SETUP.bat once, then startup.bat.
+SETUP_VOICE.bat installs the optional local speech model if Local mic reports it
+is missing. Ollama plus an installed chat model, or a working cloud API key, is
+needed for generated answers. Saved tasks and basic file commands work without AI.
+
+WHAT IS NOT YET A FINISHED INTEGRATION
+WhatsApp requires sign-in in the separate automation browser. The supported send
+syntax is: send WhatsApp to Exact Contact Name: the exact message.
+Actual message delivery was not tested against your contacts.
+LinkedIn background search saves listings for review; it does not submit applications.
+Broker trading, live telephone answering, email sending, external calendars and
+social publishing are not connected/implemented end to end. Research is a draft
+from model knowledge, not verified live web research. Generated software is saved,
+not automatically deployed or guaranteed correct. See documentation/WORKABLE_STATUS.md.
+
+Privacy: keys use the encrypted local vault. Conversations, tasks and output files
+are ordinary local files, not fully encrypted databases. The source ZIP excludes
+your credentials, browser profiles, conversations and local environment.
+
+Your earlier source files are backed up in backups/before_workable_2026-10-12.zip.
+Existing account keys and passphrase were retained in the working folder.
+
+Forgot your passphrase? Double-click RESET_PASSPHRASE.bat. This stops Manager,
+archives only its login hash, and reopens enrollment. Refresh the dashboard and
+create a new passphrase of at least 8 characters. Keys, history and tasks stay intact.
+
+BACKGROUND DOCUMENT WORK (12 OCTOBER 2026)
+Say: create my resume
+Manager searches approved folders/history, uses local AI, checks evidence and saves
+PDF/HTML/text files. Work shows progress; Outputs downloads the result.
+Say: summarize my weekly-notes document into an update and next steps
+The document assistant can search, read and save drafts using actual local tools.
+You can keep using chat while these tasks run. Keep Manager running.
+Follow-ups: continue resume; retry resume; resume progress; cancel resume.
+Other documents: continue work [answer]; work progress; cancel work.
+Saved work survives restart; interrupted work needs the continue command.
+Review drafts before external use. See documentation/ASSISTANT_WORK.md.
+
+PROJECT GOALS (12 OCTOBER 2026)
+Say: Create a LinkedIn optimizer and resume maker
+Manager plans the architecture, writes source, installs dependencies, runs tests,
+repairs failures and packages a checked local project in the background.
+Work shows progress and can start completed projects. Outputs downloads source,
+architecture, verification and preview files.
+Follow-ups: project progress; continue project; also add [requirement]; cancel project;
+open project. Keep Manager running. Preview servers stop with Manager.
+Project coding prefers configured cloud providers, with local fallback. The
+local_only setting is still respected. Other chat retains local-first behavior.
+Generated programs run with your local user permissions, not in an OS sandbox.
+See documentation/PROJECT_WORK.md for measured capabilities and limitations.
+
+NATURAL GOALS AND FOLLOW-THROUGH
+You can say "I need a website for my work" or "Can you turn these notes into
+an action list?" Supported outcomes start their actual workflow.
+Follow up with "make it faster", "it failed when I uploaded a PDF", "continue"
+or "how is it going?" Manager keeps a selected task across restarts. In Work,
+choose "Use as current task" to switch the task these follow-ups refer to.
+Relevant earlier user statements are retrieved with dates and source IDs.
+Older statements can be outdated; retrieval is bounded and not perfect memory.
+Project model failures retry once, then preserve resumable progress. Repeated
+rewrites/failures prompt a concrete execution or repair step. No completion is
+reported without the existing checks and review gates.
+

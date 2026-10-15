@@ -1,0 +1,40 @@
+# Secrets and Credentials (STRICT)
+api keys.txt
+api_keys.txt
+*.key
+*.enc
+*.hash
+*.bak
+.env
+.env*
+**/security/identity/
+**/security/*.enc
+**/security/*.key
+
+# Environments & Dependencies
+.venv/
+venv/
+**/node_modules/
+**/__pycache__/
+*.py[cod]
+
+# Logs & Runtime
+**/logs/
+**/outputs/
+**/backups/
+**/releases/
+**/workspaces/
+*.log
+
+# Large Archives & Binaries
+*.zip
+*.tar.gz
+*.exe
+old version/
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.cursor/

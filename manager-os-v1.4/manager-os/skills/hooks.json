@@ -1,0 +1,156 @@
+[
+  {
+    "name": "trade_signals",
+    "trigger_keywords": [
+      "buy",
+      "sell",
+      "trade",
+      "stock",
+      "market",
+      "nifty",
+      "sensex"
+    ],
+    "target_agent": "trading",
+    "confidence": 0.9,
+    "fire_count": 0,
+    "last_fired": null,
+    "enabled": true
+  },
+  {
+    "name": "career_actions",
+    "trigger_keywords": [
+      "resume",
+      "job",
+      "apply",
+      "interview",
+      "cv",
+      "linkedin"
+    ],
+    "target_agent": "career",
+    "confidence": 0.93,
+    "fire_count": 1,
+    "last_fired": 1780698704.0778155,
+    "enabled": true
+  },
+  {
+    "name": "build_code",
+    "trigger_keywords": [
+      "build",
+      "code",
+      "create app",
+      "program",
+      "script",
+      "deploy"
+    ],
+    "target_agent": "builder",
+    "confidence": 0.85,
+    "fire_count": 0,
+    "last_fired": null,
+    "enabled": true
+  },
+  {
+    "name": "social_content",
+    "trigger_keywords": [
+      "instagram",
+      "post",
+      "reel",
+      "caption",
+      "content",
+      "viral"
+    ],
+    "target_agent": "social",
+    "confidence": 0.9500000000000001,
+    "fire_count": 0,
+    "last_fired": null,
+    "enabled": true
+  },
+  {
+    "name": "research_deep",
+    "trigger_keywords": [
+      "research",
+      "thesis",
+      "investigate",
+      "analyze",
+      "deep dive"
+    ],
+    "target_agent": "research",
+    "confidence": 0.85,
+    "fire_count": 0,
+    "last_fired": null,
+    "enabled": true
+  },
+  {
+    "name": "file_operations",
+    "trigger_keywords": [
+      "find file",
+      "search file",
+      "send file",
+      "download",
+      "locate"
+    ],
+    "target_agent": "files",
+    "confidence": 0.9,
+    "fire_count": 0,
+    "last_fired": null,
+    "enabled": true
+  },
+  {
+    "name": "morning_briefing",
+    "trigger_keywords": [
+      "morning",
+      "briefing",
+      "today's plan",
+      "what's today"
+    ],
+    "target_agent": "life",
+    "confidence": 0.9,
+    "fire_count": 0,
+    "last_fired": null,
+    "enabled": true
+  },
+  {
+    "name": "creative_work",
+    "trigger_keywords": [
+      "image",
+      "design",
+      "poster",
+      "logo",
+      "visual",
+      "generate image"
+    ],
+    "target_agent": "creative",
+    "confidence": 0.8300000000000001,
+    "fire_count": 0,
+    "last_fired": null,
+    "enabled": true
+  },
+  {
+    "name": "self_heal_check",
+    "trigger_keywords": [
+      "what did you fix",
+      "system status",
+      "health check",
+      "errors"
+    ],
+    "target_agent": "self_heal",
+    "confidence": 0.95,
+    "fire_count": 0,
+    "last_fired": null,
+    "enabled": true
+  },
+  {
+    "name": "api_discovery",
+    "trigger_keywords": [
+      "new model",
+      "free api",
+      "nvidia nim",
+      "groq",
+      "which models"
+    ],
+    "target_agent": "api_scout",
+    "confidence": 0.9,
+    "fire_count": 0,
+    "last_fired": null,
+    "enabled": true
+  }
+]
